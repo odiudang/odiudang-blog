@@ -1,0 +1,30 @@
+baseURL = "https://odiudang.com/"
+defaultContentLanguage = "vi"
+theme = "PaperMod"
+title = "OdiuDang"
+
+[pagination]
+pagerSize = 10
+
+[params]
+defaultTheme = "auto"
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+
+[params.homeInfoParams]
+Title = "Chào mừng đến với OdiuDang"
+Content = "Nơi tôi chia sẻ kiến thức, trải nghiệm và những điều học được trong cuộc sống."
+
+[[menu.main]]
+identifier = "posts"
+name = "Bài viết"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+identifier = "about"
+name = "Giới thiệu"
+url = "/about/"
+weight = 20
