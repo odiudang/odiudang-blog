@@ -2,6 +2,7 @@ baseURL = "https://odiudang.com/"
 defaultContentLanguage = "vi"
 theme = "PaperMod"
 title = "Ổ Dịu Dàng"
+languageCode = "vi-VN"
 
 [pagination]
 pagerSize = 10
@@ -12,6 +13,11 @@ ShowReadingTime = true
 ShowShareButtons = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
+
+[params.label]
+text = "Ổ Dịu Dàng"
+icon = ""
+iconHeight = 35
 
 [params.homeInfoParams]
 Title = "Ổ Dịu Dàng"
