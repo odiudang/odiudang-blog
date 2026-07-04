@@ -33,5 +33,3 @@ identifier = "life"
 name = "Góc Linh Tinh"
 url = "/life/"
 weight = 30
-[params.assets]
-customCSS = ["css/custom.css"]
