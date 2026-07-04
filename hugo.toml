@@ -1,7 +1,7 @@
 baseURL = "https://odiudang.com/"
 defaultContentLanguage = "vi"
 theme = "PaperMod"
-title = "OdiuDang"
+title = "Ổ Dịu Dàng"
 
 [pagination]
 pagerSize = 10
@@ -14,17 +14,24 @@ ShowPostNavLinks = true
 ShowBreadCrumbs = true
 
 [params.homeInfoParams]
-Title = "Chào mừng đến với OdiuDang"
-Content = "Nơi tôi chia sẻ kiến thức, trải nghiệm và những điều học được trong cuộc sống."
+Title = "Ổ Dịu Dàng"
+Content = "Chúng ta, dù là ai, cũng đều bắt đầu từ một điểm khởi đầu. Đây là góc nhỏ mình dùng để lưu lại những điều đã học, những kinh nghiệm đã trải qua và những bài học vẫn đang tiếp tục khám phá. Hy vọng nơi này sẽ hữu ích và có thể đồng hành cùng bạn trên hành trình học tập và phát triển."
 
 [[menu.main]]
-identifier = "posts"
-name = "Bài viết"
+identifier = "study"
+name = "Góc Học Hành"
 url = "/posts/"
 weight = 10
 
 [[menu.main]]
-identifier = "about"
-name = "Giới thiệu"
-url = "/about/"
+identifier = "resources"
+name = "Góc Tài Nguyên"
+url = "/resources/"
 weight = 20
+[[menu.main]]
+identifier = "life"
+name = "Góc Linh Tinh"
+url = "/life/"
+weight = 30
+[params.assets]
+customCSS = ["css/custom.css"]
