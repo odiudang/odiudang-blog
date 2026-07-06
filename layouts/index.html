@@ -1,0 +1,144 @@
+{{ define "main" }}
+
+<section class="home-hero">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            🌿 Một góc nhỏ để học tập và sống chậm
+        </span>
+
+        <h1>Ổ Dịu Dàng</h1>
+
+        <p class="hero-lead">
+            Nơi mình lưu lại những điều đã học, những trải nghiệm trong công việc và những câu chuyện nhỏ giúp mỗi ngày trở nên nhẹ nhàng hơn.
+        </p>
+
+        <div class="hero-actions">
+            <a class="hero-btn primary" href="/posts/">
+                Bắt đầu đọc →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home-sections">
+
+    <a href="/posts/" class="section-card">
+
+        <div class="card-icon">📚</div>
+
+        <h2>Góc Học Hành</h2>
+
+        <p class="card-tagline">
+            Chia sẻ kiến thức về kế toán, ngoại ngữ, Excel, Power BI và những kỹ năng hữu ích trong công việc.
+        </p>
+
+        <span class="card-divider"></span>
+
+        <span class="card-link">
+            Khám phá →
+        </span>
+
+    </a>
+
+    <a href="/resources/" class="section-card">
+
+        <div class="card-icon">📦</div>
+
+        <h2>Góc Tài Nguyên</h2>
+
+        <p class="card-tagline">
+            Biểu mẫu, tài liệu, file Excel và những tài nguyên hữu ích để học tập và làm việc hiệu quả hơn.
+        </p>
+
+        <span class="card-divider"></span>
+
+        <span class="card-link">
+            Khám phá →
+        </span>
+
+    </a>
+
+    <a href="/life/" class="section-card">
+
+        <div class="card-icon">☘</div>
+
+        <h2>Góc Linh Tinh</h2>
+
+        <p class="card-tagline">
+            Những câu chuyện về cuộc sống, trải nghiệm, suy ngẫm và những điều nhỏ bé khiến mỗi ngày trở nên ý nghĩa hơn.
+        </p>
+
+        <span class="card-divider"></span>
+
+        <span class="card-link">
+            Khám phá →
+        </span>
+
+    </a>
+
+</section>
+
+<section class="latest-posts">
+
+    <div class="section-heading">
+        <h2>Bài viết mới nhất</h2>
+        <p>Những chia sẻ gần đây từ Ổ Dịu Dàng.</p>
+    </div>
+
+    <div class="post-grid">
+
+        {{ range first 3 (where site.RegularPages "Section" "posts") }}
+
+        <article class="post-card">
+
+            <div class="post-image">
+
+                {{ with .Params.cover.image }}
+                    <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+                {{ else }}
+                    <div class="post-image-placeholder">🌿</div>
+                {{ end }}
+
+            </div>
+
+            <div class="home-post-content">
+
+                <span class="post-date">
+                    {{ .Date.Format "02/01/2006" }}
+                </span>
+
+                <h3>
+                    <a href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                    </a>
+                </h3>
+
+                <p>
+                    {{ .Summary }}
+                </p>
+
+                <a class="read-more" href="{{ .RelPermalink }}">
+                    Đọc tiếp →
+                </a>
+
+            </div>
+
+        </article>
+
+        {{ end }}
+
+    </div>
+
+    <div class="more-posts">
+        <a href="/posts/">
+            Xem tất cả bài viết →
+        </a>
+    </div>
+
+</section>
+
+{{ end }}

@@ -1,0 +1,72 @@
+/* ===========================
+   Bài viết
+=========================== */
+
+.post-single {
+    max-width: 820px;
+}
+
+.post-title {
+    margin-bottom: 12px;
+}
+
+.single-post-meta {
+    margin-bottom: 20px;
+}
+
+.post-cover {
+    margin: 24px 0 40px;
+}
+
+.post-cover img {
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+}
+.post-title {
+    max-width: 900px;
+    line-height: 1.2;
+}
+/* Lead */
+
+.post-lead {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--secondary);
+    max-width: 760px;
+    margin: 0 auto 42px;
+    font-weight: 500;
+}
+/* ===========================
+   Author Box
+=========================== */
+
+/* ===========================
+   Author Box
+=========================== */
+
+.author-box{
+    margin:56px 0 48px;
+    padding:0;
+    background:none;
+    border:none;
+    border-top:1px solid var(--border);
+    padding-top:28px;
+}
+
+.author-box h3{
+    margin:0 0 16px;
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+.author-box p{
+    margin:0 0 14px;
+    color:var(--secondary);
+    line-height:1.9;
+    max-width:720px;
+}
+
+.author-box p:last-child{
+    margin-bottom:0;
+}

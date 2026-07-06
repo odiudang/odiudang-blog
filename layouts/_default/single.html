@@ -1,0 +1,146 @@
+{{ define "main" }}
+<article class="post-single">
+
+    <h1 class="post-title">
+        {{ .Title }}
+    </h1>
+
+    <div class="single-post-meta">
+
+        <span>📅</span>
+        <span>{{ .Date.Format "2 tháng 1, 2006" }}</span>
+
+        {{ if ne .Lastmod .Date }}
+        <span>•</span>
+        <span>🔄</span>
+        <span>Cập nhật: {{ .Lastmod.Format "2 tháng 1, 2006" }}</span>
+        {{ end }}
+
+        <span>•</span>
+
+        <span>⏱️</span>
+        <span>{{ .ReadingTime }} phút đọc</span>
+
+    </div>
+
+    {{ if .Params.ShowToc }}
+        {{ .TableOfContents }}
+    {{ end }}
+
+    {{ with .Params.cover.image }}
+    <div class="post-cover">
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+    </div>
+    {{ end }}
+
+    {{ with .Params.lead }}
+    <div class="post-lead">
+        {{ . }}
+    </div>
+    {{ end }}
+
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+
+    {{ with .Params.tags }}
+    <div class="post-tags">
+        {{ range . }}
+        <a class="post-tag" href="/tags/{{ . | urlize }}/">#{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <hr>
+<div class="author-box">
+
+    <h3>🌿 Về Ổ Dịu Dàng</h3>
+
+    <p>
+        Ổ Dịu Dàng là nơi mình chia sẻ những kiến thức về học tập,
+        ngoại ngữ, Excel, Power BI, kế toán và những trải nghiệm
+        trên hành trình phát triển bản thân.
+    </p>
+
+    <p>
+        Hy vọng mỗi bài viết ở đây sẽ giúp bạn học được thêm một điều nhỏ,
+        sống chậm hơn một chút và tiến bộ mỗi ngày.
+    </p>
+
+</div>
+    <div class="post-footer">
+
+        <h2>🌿 Kết nối với Ổ Dịu Dàng</h2>
+
+        <p class="footer-intro">
+            Cảm ơn bạn đã dành thời gian đọc bài viết.
+            Nếu yêu thích những nội dung về học tập, phát triển bản thân và cuộc sống,
+            hãy kết nối với mình trên các nền tảng dưới đây.
+        </p>
+
+        <div class="footer-social">
+
+            <a href="https://www.facebook.com/odiudang" target="_blank" rel="noopener">
+                <span>📘</span>
+                <div>
+                    <strong>Facebook</strong>
+                    <small>Theo dõi bài viết mới</small>
+                </div>
+            </a>
+
+            <a href="https://vt.tiktok.com/ZSCsuAo4h/" target="_blank" rel="noopener">
+                <span>🎵</span>
+                <div>
+                    <strong>TikTok</strong>
+                    <small>Video ngắn mỗi tuần</small>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCPPVcbufoEFZdaI_PtMqo5g" target="_blank" rel="noopener">
+                <span>▶️</span>
+                <div>
+                    <strong>YouTube</strong>
+                    <small>Video dài & chia sẻ chuyên sâu</small>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="footer-share">
+
+            <p>💚 Nếu bài viết hữu ích, hãy chia sẻ để nhiều người cùng đọc hơn.</p>
+
+            <button class="share-button"
+                onclick="navigator.share ? navigator.share({title: document.title, url: window.location.href}) : navigator.clipboard.writeText(window.location.href).then(()=>alert('Đã sao chép liên kết!'));">
+
+                🔗 Chia sẻ bài viết
+
+            </button>
+
+        </div>
+
+    </div>
+
+    {{ if or .PrevInSection .NextInSection }}
+
+    <nav class="post-navigation">
+
+        {{ with .PrevInSection }}
+        <a class="post-nav prev" href="{{ .RelPermalink }}">
+            ← {{ .Title }}
+        </a>
+        {{ end }}
+
+        {{ with .NextInSection }}
+        <a class="post-nav next" href="{{ .RelPermalink }}">
+            {{ .Title }} →
+        </a>
+        {{ end }}
+
+    </nav>
+
+    {{ end }}
+
+</article>
+
+{{ end }}

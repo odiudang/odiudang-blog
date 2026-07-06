@@ -4,38 +4,76 @@ theme = "PaperMod"
 title = "Ổ Dịu Dàng"
 languageCode = "vi-VN"
 
+enableRobotsTXT = true
+
 [pagination]
 pagerSize = 10
 
 [params]
 defaultTheme = "auto"
+
+description = "Blog chia sẻ về học tập, ngoại ngữ, kế toán, Excel, Power BI và những trải nghiệm sống chậm mỗi ngày."
+keywords = ["học tiếng Anh", "TOEIC", "Excel", "Power BI", "kế toán", "blog", "Ổ Dịu Dàng"]
+author = "Ổ Dịu Dàng"
+images = ["/images/og-cover.jpg"]
+
+mainSections = ["posts"]
+
 ShowReadingTime = true
-ShowShareButtons = true
+ShowWordCount = true
+ShowLastMod = true
+
+ShowShareButtons = false
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
+ShowToc = true
+ShowCodeCopyButtons = true
 
-[params.label]
-text = "Ổ Dịu Dàng"
-icon = ""
-iconHeight = 35
+ShowFullTextinRSS = true
+
 
 [params.homeInfoParams]
-Title = "Ổ Dịu Dàng"
-Content = "Chúng ta, dù là ai, cũng đều bắt đầu từ một điểm khởi đầu. Đây là góc nhỏ mình dùng để lưu lại những điều đã học, những kinh nghiệm đã trải qua và những bài học vẫn đang tiếp tục khám phá. Hy vọng nơi này sẽ hữu ích và có thể đồng hành cùng bạn trên hành trình học tập và phát triển."
+Title = "🌿 Ổ Dịu Dàng"
+
+Content = """
+Một góc nhỏ để lưu lại những điều đã học,
+những kinh nghiệm đã trải qua
+và những bài học vẫn đang tiếp tục khám phá.
+
+Hy vọng nơi này sẽ đồng hành cùng bạn
+trên hành trình học tập, phát triển
+và sống chậm hơn mỗi ngày.
+"""
+
+[[menu.main]]
+identifier = "home"
+name = "Trang Chủ"
+url = "/"
+weight = 10
 
 [[menu.main]]
 identifier = "study"
 name = "Góc Học Hành"
 url = "/posts/"
-weight = 10
+weight = 20
 
 [[menu.main]]
 identifier = "resources"
 name = "Góc Tài Nguyên"
 url = "/resources/"
-weight = 20
+weight = 30
+
 [[menu.main]]
 identifier = "life"
 name = "Góc Linh Tinh"
 url = "/life/"
-weight = 30
+weight = 40
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+[services]
+  [services.googleAnalytics]
+    id = "G-G5J593EPRY"

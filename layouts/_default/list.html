@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Description }}
+    <div class="post-description">
+        {{ . }}
+    </div>
+    {{ end }}
+</header>
+
+<div class="post-grid">
+
+{{ range .Pages }}
+
+<a class="post-card" href="{{ .RelPermalink }}">
+
+    {{ with .Params.cover.image }}
+    <div class="post-image">
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+    </div>
+    {{ end }}
+
+    <div class="list-post-content">
+
+        <div class="post-meta">
+            📅 {{ .Date.Format "2 tháng 1, 2006" }}
+            <span>•</span>
+            ⏱️ {{ .ReadingTime }} phút đọc
+        </div>
+
+        <h2>{{ .Title }}</h2>
+
+        <p class="post-summary">
+    {{ .Description | default .Summary }}
+</p>
+        <span class="read-more">
+            Đọc tiếp →
+        </span>
+
+    </div>
+
+</a>
+
+{{ end }}
+
+</div>
+
+{{ end }}
