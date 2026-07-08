@@ -2,9 +2,11 @@ baseURL = "https://odiudang.com/"
 defaultContentLanguage = "vi"
 theme = "PaperMod"
 title = "Ổ Dịu Dàng"
-languageCode = "vi-VN"
+locale = "vi-VN"
+timeZone = "Asia/Ho_Chi_Minh"
 
 enableRobotsTXT = true
+enableGitInfo = true
 
 [pagination]
 pagerSize = 10
@@ -33,6 +35,9 @@ ShowFullTextinRSS = true
 
 
 [params.homeInfoParams]
+[params.assets]
+theme_color = "#7A8F52"
+msapplication_TileColor = "#7A8F52"
 Title = "🌿 Ổ Dịu Dàng"
 
 Content = """
@@ -72,8 +77,18 @@ weight = 40
 [taxonomies]
 tag = "tags"
 category = "categories"
+
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
 [services]
   [services.googleAnalytics]
     id = "G-G5J593EPRY"
+
+[sitemap]
+changefreq = "weekly"
+priority = 0.5
+filename = "sitemap.xml"
+
+[permalinks]
+posts = "/:slug/"

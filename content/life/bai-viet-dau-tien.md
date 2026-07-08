@@ -5,7 +5,7 @@ title = 'Bài viết đầu tiên'
 ShowToc = true
 description = "Bài viết đầu tiên trên Ổ Dịu Dàng, nơi mình chia sẻ những điều đã học và hành trình xây dựng blog."
 lead = "Đây là bài viết mở đầu của Ổ Dịu Dàng, nơi mình chia sẻ hành trình học tập, phát triển bản thân và những điều nhỏ bé đáng để lưu giữ."
-tags = ["Giới thiệu", "Ổ Dịu Dàng"]
+tags = ["Blog", "Ổ Dịu Dàng"]
 categories = ["Góc Linh Tinh"]
 [cover]
 image = "/images/posts/bai-viet-dau-tien.png"

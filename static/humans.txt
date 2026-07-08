@@ -1,0 +1,17 @@
+/* TEAM */
+
+Website: Ổ Dịu Dàng
+Owner: Ổ Dịu Dàng
+Website: https://odiudang.com
+
+/* SITE */
+
+Built with:
+- Hugo
+- PaperMod
+
+Language:
+- Vietnamese
+
+Last Updated:
+2026

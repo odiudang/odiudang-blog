@@ -29,7 +29,12 @@
 
     {{ with .Params.cover.image }}
     <div class="post-cover">
-        <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+        <img
+    src="{{ . | relURL }}"
+    alt="{{ $.Title }}"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async">
     </div>
     {{ end }}
 
@@ -80,7 +85,7 @@
 
         <div class="footer-social">
 
-            <a href="https://www.facebook.com/odiudang" target="_blank" rel="noopener">
+            <a href="https://www.facebook.com/odiudang" target="_blank" rel="noopener noreferrer">
                 <span>📘</span>
                 <div>
                     <strong>Facebook</strong>
@@ -88,7 +93,7 @@
                 </div>
             </a>
 
-            <a href="https://vt.tiktok.com/ZSCsuAo4h/" target="_blank" rel="noopener">
+            <a href="https://vt.tiktok.com/ZSCsuAo4h/" target="_blank" rel="noopener noreferrer">
                 <span>🎵</span>
                 <div>
                     <strong>TikTok</strong>
@@ -96,7 +101,7 @@
                 </div>
             </a>
 
-            <a href="https://www.youtube.com/channel/UCPPVcbufoEFZdaI_PtMqo5g" target="_blank" rel="noopener">
+            <a href="https://www.youtube.com/channel/UCPPVcbufoEFZdaI_PtMqo5g" target="_blank" rel="noopener noreferrer">
                 <span>▶️</span>
                 <div>
                     <strong>YouTube</strong>
