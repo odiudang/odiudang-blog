@@ -17,7 +17,7 @@ defaultTheme = "auto"
 description = "Blog chia sẻ về học tập, ngoại ngữ, kế toán, Excel, Power BI và những trải nghiệm sống chậm mỗi ngày."
 keywords = ["học tiếng Anh", "TOEIC", "Excel", "Power BI", "kế toán", "blog", "Ổ Dịu Dàng"]
 author = "Ổ Dịu Dàng"
-images = ["/images/og-cover.jpg"]
+images = ["/images/og-cover.png"]
 
 mainSections = ["posts"]
 
