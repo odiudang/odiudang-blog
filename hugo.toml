@@ -59,14 +59,56 @@ weight = 10
 [[menu.main]]
 identifier = "study"
 name = "Góc Học Hành"
-url = "/posts/"
+url = "/study/"
 weight = 20
+
+[[menu.main]]
+name = "Tiếng Anh"
+parent = "study"
+url = "/english/"
+weight = 21
+
+[[menu.main]]
+name = "Tiếng Trung"
+parent = "study"
+url = "/chinese/"
+weight = 22
+
+[[menu.main]]
+name = "Kỹ năng số"
+parent = "study"
+url = "/digital-skills/"
+weight = 23
+
+[[menu.main]]
+name = "Kế toán"
+parent = "study"
+url = "/accounting/"
+weight = 24
 
 [[menu.main]]
 identifier = "resources"
 name = "Góc Tài Nguyên"
 url = "/resources/"
 weight = 30
+
+[[menu.main]]
+name = "Ngoại ngữ"
+parent = "resources"
+url = "/resources/languages/"
+weight = 31
+
+[[menu.main]]
+name = "Kỹ năng số"
+parent = "resources"
+url = "/resources/digital-skills/"
+weight = 32
+
+[[menu.main]]
+name = "Văn bản pháp luật"
+parent = "resources"
+url = "/resources/legal-documents/"
+weight = 33
 
 [[menu.main]]
 identifier = "life"

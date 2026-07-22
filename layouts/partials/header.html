@@ -90,7 +90,7 @@
 {{- $currentPage := . }}
 
 <ul id="menu" class="menu">
-    {{- range site.Menus.main }}
+   {{- range site.Menus.main }}
     {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
     {{- $page_url:= $currentPage.Permalink | absLangURL }}
     {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
@@ -111,7 +111,6 @@
                 <path d="M10 14L21 3"></path>
             </svg>
             {{- end }}
-        </a>
     </li>
        {{- end }}
 
